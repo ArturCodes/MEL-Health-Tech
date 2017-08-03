@@ -1,0 +1,338 @@
+// 
+//  Developed & Designed by Artur Shapiro
+//  Contact: goo.gl/r5uWrL
+//
+// +++++++++++++++++++++++++++++++++++++++++++
+// ███████████████████████████████████████████
+//           COMMON ACROSS ALL PAGE  
+// ███████████████████████████████████████████
+// +++++++++++++++++++++++++++++++++++++++++++
+  // ███████████████████████████████████████████
+  //           SASS Variables
+  // ███████████████████████████████████████████
+
+    $main-black: #292B2C;
+    $second-black: #111111;
+
+    $first-text: #eeeeee;
+    $second-text: #b5b5b5;
+
+    $light-bg: #efefef;
+    $border-color: #b1b1b1;
+
+    @mixin box-shadow {
+      border: 1px solid #b1b1b1;
+    }
+
+    @mixin side-border {
+      border: 1px solid #b1b1b1;
+    }
+
+    $carousel-height: 400px;
+
+    body {
+      background: url("../img/waves.png")
+    }
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// ███████████████████████████████████████████
+//           HOME PAGE  
+// ███████████████████████████████████████████
+// +++++++++++++++++++++++++++++++++++++++++++
+
+  // ███████████████████████████████████████████
+  //           Top Bar
+  // ███████████████████████████████████████████
+
+    #top-bar {
+      font-size: 14px;
+      background: $main-black / .8;
+      color: $first-text;
+      height: 115px;
+    }
+    #top-logo {
+      margin-top: -75px;
+      height: 255px;
+      overflow: hidden;
+      z-index: 2;
+    }
+    #top-bar-text {
+      position: relative;
+      text-shadow: 1px 1px 0$main-black,
+                -1px -1px 0$main-black,
+                  -1px 1px 0$main-black,
+                  1px -1px 0 $main-black;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 3.5px;
+      left: 5px;
+      top: -90px;
+      
+
+    }
+
+  // ███████████████████████████████████████████
+  //           Logo & Navigation      
+  // ███████████████████████████████████████████
+    .navbar {
+      border-bottom: 1px solid $main-black;
+      border-top: 1px solid $main-black;
+    }
+    .nav-item {
+      border-bottom: 1px transparent solid;
+      border-top: 1px transparent solid;
+      &:hover {
+      border-bottom: 1px $second-text solid;
+      border-top: 1px $second-text solid;
+      }
+    }
+    .active {
+      border-bottom: 1px $second-text solid;
+      border-top: 1px $second-text solid;
+    }
+    .navbar-brand img {
+      height: 150px;
+    }
+  // ███████████████████████████████████████████
+  //           Screen Carousel  
+  // ███████████████████████████████████████████
+
+    ////////////////////////////
+    //    Carousel Content    //
+    ////////////////////////////
+    #carousel-main {
+      height: $carousel-height;
+      background: transparent;    
+    }
+
+    .carousel-item {
+      text-shadow: 1px 1px 0$main-black,
+                -1px -1px 0$main-black,
+                  -1px 1px 0$main-black,
+                  1px -1px 0 $main-black;
+                  
+
+    }
+
+    #first-slide {
+      height: $carousel-height;
+      background: url("../img/bg1.jpg") no-repeat center center;
+    }
+    #second-slide {
+      height: $carousel-height;
+      background: url("../img/bg3.jpg") no-repeat center center;
+    }
+      #third-slide {
+      height: $carousel-height;
+      background: url("../img/bg1.jpg") no-repeat center center;
+    }
+      #fourth-slide {
+      height: $carousel-height;
+      background: url("../img/bg3.jpg") no-repeat center center;
+    }
+    /////////////////////////////
+    //    Carousel Controls    //
+    /////////////////////////////
+    .control-arrows {
+      height: auto;
+      padding-top: 300px;
+    }
+
+
+  // ███████████████████████████████████████████
+  //           Content - SECTION 1     
+  // ███████████████████████████████████████████
+
+    #content-s1 {
+      background: $light-bg;
+      @include box-shadow;
+    }
+  // ███████████████████████████████████████████
+  //           Content - SECTION 2     
+  // ███████████████████████████████████████████
+    
+    #content-s2 {
+      background: $light-bg;
+      @include box-shadow;
+    }
+
+  // ███████████████████████████████████████████
+  //           Footer & Info
+  // ███████████████████████████████████████████
+
+    #footer {
+      height: auto;
+      background: $main-black;
+      color: $first-text;
+      h3 {
+        color: $first-text;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: $second-text;
+        &:hover {
+          color: $first-text;
+        }
+      }
+      .btn-social-icon {
+        float: left;
+        margin: 0 3px;
+        i {
+          color: $first-text;
+        }
+      }
+    }
+    #content-footer {
+      h3 {
+        padding-bottom: 20px;
+        margin-top: 25px;
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+
+  // ███████████████████████████████████████████
+  //           Copyright & Developer
+  // ███████████████████████████████████████████
+
+    #copyright-footer{
+      font-size: 14px;
+      background: $main-black * .85;
+      padding: 5px;
+      li {
+        margin-right: 23px;
+        display: block;
+        float: left;
+      }
+      a {
+        color: $main-black / .3;
+        text-decoration: none;
+        &:hover {
+        color: white;
+        }
+      }
+    }
+
+    #developer-footer {
+      font-size: 14px;
+      background: $main-black * .85;
+      a {
+        color: $main-black / .3;
+        text-decoration: none;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+
+  // ███████████████████████████████████████████
+  //           Media Queries
+  // ███████████████████████████████████████████
+
+    @media (max-width: 465px) {
+
+      #top-logo {
+      margin-top: -15px;
+      height: 150px;
+      }
+      #top-bar-text {
+        display: none;
+      }
+    }
+
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// ███████████████████████████████████████████
+//           ABOUT PAGE  
+// ███████████████████████████████████████████
+// +++++++++++++++++++++++++++++++++++++++++++
+
+  // ███████████████████████████████████████████
+  //        About - Section 1   
+  // ███████████████████████████████████████████
+
+    #about-page {
+      background-color: $light-bg;
+      border-right: 1px solid $border-color;
+      border-left: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+    }
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// ███████████████████████████████████████████
+//           SERVICES PAGE  
+// ███████████████████████████████████████████
+// +++++++++++++++++++++++++++++++++++++++++++
+
+  // ███████████████████████████████████████████
+  //         Service - Section 1  
+  // ███████████████████████████████████████████
+
+  #services-page {
+    background: $light-bg;
+    @include box-shadow;
+    height: auto;
+  }
+
+// +++++++++++++++++++++++++++++++++++++++++++
+// ███████████████████████████████████████████
+//           CONTACT PAGE  
+// ███████████████████████████████████████████
+// +++++++++++++++++++++++++++++++++++++++++++
+
+  // ███████████████████████████████████████████
+  //           Contact Us - Section
+  // ███████████████████████████████████████████
+
+    #contact-page {
+      height: auto;
+      border-right: 1px solid $border-color;
+      border-left: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      background: $light-bg;
+    }
+// +++++++++++++++++++++++++++++++++++++++++++
+// ███████████████████████████████████████████
+//           REFERENCES PAGE  
+// ███████████████████████████████████████████
+// +++++++++++++++++++++++++++++++++++++++++++
+
+  // ███████████████████████████████████████████
+  //           Referrals - Section
+  // ███████████████████████████████████████████
+    
+    #referrals {
+      background: $light-bg;
+      @include side-border;
+    }
+
+  // ███████████████████████████████████████████
+  //           Cases - Section
+  // ███████████████████████████████████████████
+
+    #case-header {
+      background: $light-bg;
+      border-left: 1px solid $border-color;
+      border-top: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+    }
+    #group-a {
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      background: $light-bg;
+    }
+    #group-b {
+      border-right: 1px solid $border-color;
+      border-left: 1px solid $border-color;
+      background: $light-bg;
+    }
+    #case-footer {
+      height: auto;
+      background: $light-bg;
+      border-left: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+    }
+
